@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './test.scss';
 
 export default class App extends React.Component {
 
