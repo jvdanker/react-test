@@ -35,11 +35,20 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader', 'resolve-url-loader', 'sass-loader']
+                    use: [{
+                        loader: "css-loader",
+                    }, {
+                        loader: "resolve-url-loader"
+                    },{
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    }]
                 })
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|jpg)$/,
+                test: /\.(eot|svg|ttf|woff|woff2|jpg|gif)$/,
                 loader: 'file-loader?name=[name].[ext]'
             }
         ],

@@ -1,6 +1,8 @@
 body {
-  background-color: black;
-  color: white;
+  //background-color: black;
+  //color: white;
 }
 
 @import 'module/module.scss';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
